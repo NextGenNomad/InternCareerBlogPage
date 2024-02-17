@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <!--header -------->
+    <header class="showcase">
+        <div class="nav__container">
+            <nav class="nav__bar container">
+                <a href="#!" class="logo">VoyageVista<span></span></a>
+                <%- include('./partials/nav') %>
+                <% if (user) { %>
+                    <a href="/signin"><i class="fa-solid fa-user"></i><%= user.username %></a>
+                <% } else { %>
+                    <a href="/signin" class="btn__primary">Sign In</a>
+                <% } %>
+            </nav>
+        </div>
+        <!--showcase content ------>
+        <div class="showcase__content slider">
+            <div class="inner__slider">
+                <div class="img__container first">
+                    <img src="/img/showcase-2.jpg" alt="showcase image">
+                </div>
+            </div>
+            <div class="container">
+                <div class="inner__content">
+                    <h1>Your Stories, Our Adventure - Start Sharing!</h1>
+                    <p>Lorem ipsum dolor sit amet. Et dolor numquam ex deserunt accusantium et dolor illo. Qui quis inventore ut     assumenda corporis et quas quidem quo placeat velit At ullam repellendus </p>
+                    <a href="/create-post" class="btn__primary">Create Post</a>
+                    <a href="/explore" class="btn__secondary">Explore more</a>
+                </div>
+            </div> 
+        </div>
+        <!--showcase end ----->
+    </header>
+    <!--end header -------->
+
+    <!--way through section -------->
+    <section class="way__through">
+        <div class="container">
+            <!--left content box ------>
+            <div class="left__content">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <h2>Find Your Way <span>Through</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae et delectus quas maiores minus ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, quidem. Perferendis omnis consectetur consequatur nesciunt. Quas quisquam numquam laboriosam ullam.</p>
+                <a href="/about" class="btn__primary">Read more<i class="fa fa-long-arrow-right" ></i></a>
+            </div>
+            <!--left content box end ------->
+            <!--right content ------>
+            <div class="right__content">
+                <div class="inner__right__content">
+                    <div class="img__container">
+                        <img src="/img/pic.jpg" alt="through image">
+                    </div>
+                </div>
+            </div>
+            <!--right content end ------->
+        </div>
+    </section>
+
+    <!--=============TRENDING POST ==========--->
+    <section class="trending">
+        <div class="container"> 
+            <div class="title">
+                <h2>Trending <span>Blogs</span></h2>
+            </div>
+            <div class="blog__row">
+                <div class="btn right__btn"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="btn left__btn"><i class="fa-solid fa-chevron-right"></i></div>
+                <!--first blog column ------>
+                <div class="blog__column">
+                    <img src="/img/blog-1.jpg" alt="" class="blog__img">
+                    <div class="blog__content">
+                        <div class="title__container">
+                            <a href="post.ejs" class="blog__title">Captivating Costa Rica: A Journey Through Pura Vida</a>
+                        </div>
+                        <div class="blog__date">
+                           <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                           <span class="day">23,</span>
+                           <span class="year">2022</span>
+                        </div>
+                        <div class="blog__admin">
+                          <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                       </div>
+                    </div>       
+                </div>
+             
+
+                <!--second blog column ------>
+                <div class="blog__column">
+                    <img src="/img/blog-2.jpg" alt="" class="blog__img">
+                    <div class="blog__content">
+                        <div class="title__wrap">
+                            <a href="post.html" class="blog__title">Unvieling the Soul of Paris: A Cultural Odyssey</a>
+                        </div>
+                        <div class="blog__date">
+                            <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                            <span class="day">9,</span>
+                            <span class="year">2024</span>
+                         </div>
+                         <div class="blog__admin">
+                           <span class="admin__name"><i class="fa-solid fa-user"></i> Oliver Taylor</span>
+                        </div>
+                    </div>       
+                </div>
+        
+                <!--third blog column ------>
+                <div class="blog__column">
+                    <img src="/img/blog-4.jpg" alt="" class="blog__img">
+                    <div class="blog__content">
+                        <div class="title__wrap">
+                            <a href="#!" class="blog__title">City Wonders: Exploring the Architecyural Marvels of Tokyo</a>
+                        </div>
+                        <div class="blog__date">
+                            <span class="month"><i class="fa-solid fa-calendar"></i>February</span>
+                            <span class="day">14,</span>
+                            <span class="year">2024</span>
+                         </div>
+                         <div class="blog__admin">
+                           <span class="admin__name"><i class="fa-solid fa-user"></i>Noah Clark</span>
+                        </div>
+                    </div>       
+                </div>
+          
+                <!--fourth blog column ------>
+                <div class="blog__column">
+                    <img src="/img/blog-3.jpg" alt="" class="blog__img">
+                    <div class="blog__content">
+                        <div class="title__wrap">
+                            <a href="#!" class="blog__title">Urban Legends: Hitorical Mysteries of Famous</a>
+                        </div>
+                        <div class="blog__date">
+                            <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                            <span class="day">10,</span>
+                            <span class="year">2024</span>
+                         </div>
+                         <div class="blog__admin">
+                           <span class="admin__name"><i class="fa-solid fa-user"></i> Harper Martinez</span>
+                        </div>
+                    </div>       
+                </div>
+                <!--first blog column end--> 
+            </div>
+        </div>   
+    </section>
+
+   <!--================= FEATURED SECTION ==============-->
+    <section class="featured">
+        <div class="container">
+            <div class="title">
+                <h2>Featured <span>Blogs</span></h2>
+            </div>
+            <div class="featured__wrapper">
+                <div class="right__content">
+                    <div class="post__row">
+                        <!--first post-->
+                        <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/blog-5.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                    <span class="day">15,</span>
+                                    <span class="year">2024</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i> Lily Adams</span>
+                                 </div>
+                                 <div class="title__wrap">
+                                    <a href="#!" class="post__title">Savoring the Flavors of Italy: A Culinary Tour</a>
+                                 </div>
+                                <p> Indulge in the culinary delights of Italy as we sample authentic pasta dishes, sip on rich espresso, and savor creamy gelato in charming Italian cafes</p>
+                            </div>
+                        </div>
+                        <!--second post-->
+                        <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/blog-6.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                    <span class="day">16,</span>
+                                    <span class="year">2024</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i>Sophia Lee</span>
+                                 </div>
+                                <a href="#!" class="post__title">Tranquil Escapes: Remote Retreats Around the World</a>
+                                <p> Discover secluded retreats and serene getaways nestled in nature, offering peace, tranquility, and the perfect opportunity to unwind and recharge.</p>
+                            </div>
+                        </div>
+                        <!--third post-->
+                        <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/post-1.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                    <span class="day">23,</span>
+                                    <span class="year">2022</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i> Ethan Smith</span>
+                                 </div>
+                                <a href="#!" class="post__title">Unforgettable Road Trips: Scenic Routes and Hidden Treasures</a>
+                                <p> Hit the open road and embark on epic road trips through breathtaking landscapes, winding mountain passes, and charming small towns off the beaten path.</p>
+                            </div>
+                        </div>
+                        <!--fourth post-->
+                        <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/post-3.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i>February</span>
+                                    <span class="day">13,</span>
+                                    <span class="year">2024</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i>Mia Williams</span>
+                                 </div>
+                                <a href="#!" class="post__title">Cultural Immersion: Exploring Traditions and Festivals Worldwide</a>
+                                <p>Immerse yourself in the vibrant cultures of the world as we explore traditional celebrations, colorful festivals, and age-old customs that showcase the diversity of humanity.</p>
+                            </div>
+                        </div>
+                         <!--third post-->
+                         <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/post-4.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                    <span class="day">29,</span>
+                                    <span class="year">2024</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i>Liam Brown</span>
+                                 </div>
+                                <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                <p> Immerse yourself in the vibrant cultures of the world as we explore traditional celebrations, colorful festivals, and age-old customs that showcase the diversity of humanity.</p>
+                            </div>
+                        </div>
+                        <!--fourth post-->
+                        <div class="blog__post">
+                            <div class="img__container">
+                                <img src="/img/post-5.jpg" alt="blog image">
+                            </div>
+                            <div class="post__content">
+                                <div class="blog__date">
+                                    <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                    <span class="day">10,</span>
+                                    <span class="year">2024</span>
+                                 </div>
+                                 <div class="blog__admin">
+                                   <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                 </div>
+                                <a href="#!" class="post__title">Tropical Islands and Sun-Kissed Beaches</a>
+                                <p>
+                                Escape to tropical paradise as we island-hop through crystal-clear waters, lounge on pristine beaches, and soak up the sun in idyllic island settings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#!" class="btn__primary">Load more</a> 
+                </div>
+                <!--sidebar ----->
+                <aside class="sidebar">
+                    <h3>Follow Us</h3>
+                    <div class="media__icons ">
+                        <ul>
+                            <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Join Us Today!</h4>
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, corporis voluptas. Laudantium obcaecati corporis maxime!</span>
+                         <form action="#!" autocomplete="off">
+                            <div class="input__box">
+                                <input type="text" name="name"  placeholder="Name">
+                            </div>
+                            <div class="input__box">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <input type="submit" value="Subscribe" name="submit">
+                         </form>
+                    </div>
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#!">City Guides (6)</a></li>
+                            <li><a href="#!">Culteral Experience (8)</a></li>
+                            <li><a href="#!">Urban Adventure (4)</a></li>
+                            <li><a href="#!">Hidden Gems (6)</a></li>
+                            <li><a href="#!">Travel Tips (9)</a></li>
+                            <li><a href="#!">Street Photography (4)</a></li>
+                        </ul>
+                    </div>
+                    <div class="popular__posts">
+                         <h3>Popular Posts</h3>
+                         <div class="post__wrapper">
+                            <div class="post first">
+                                <div class="img__container">
+                                    <img src="/img/blog-1.jpg" alt="post img">
+                                </div>
+                                <div class="card__content">
+                                    <div class="post__details">
+                                        <div class="blog__date">
+                                            <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                            <span class="day">4,</span>
+                                            <span class="year">2024</span>
+                                         </div>
+                                         <div class="blog__admin">
+                                           <span class="admin__name"><i class="fa-solid fa-user"></i> Liam Brown</span>
+                                        </div>
+                                    </div> 
+                                    <a href="#!" class="card__title">Captivating Costa Rica: A Journey Through Pura Vida</a>                
+                                </div>
+                            </div>
+                            <!-------------->
+                            <div class="post second">
+                                <div class="img__container">
+                                    <img src="/img/blog-5.jpg" alt="post img">
+                                </div>
+                                <div class="card__title__wrap">
+                                    <a href="#!" class="post__title">Unvieling the Soul of Paris: A Cultural Odyssey</a>
+                                </div>
+                                <div class="post__details">
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> February</span>
+                                        <span class="day">9,</span>
+                                        <span class="year">2024</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <!-------------->
+                            <div class="post third">
+                                <div class="img__container">
+                                    <img src="/img/blog-2.jpg" alt="post img">
+                                </div>
+                                <div class="card__title__wrap"> 
+                                    <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                </div>
+          
+                                <div class="post__details">
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i>February</span>
+                                        <span class="day">13,</span>
+                                        <span class="year">2024</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i>Mia Williams</span>
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <!-------------->
+                            <div class="post forth">
+                                <div class="img__container">
+                                    <img src="/img/post-3.jpg" alt="post img">
+                                </div>
+                                <div class="card__title__warp">
+                                    <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                </div>
+                                <div class="post__details">
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                                        <span class="day">23,</span>
+                                        <span class="year">2022</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!------------>
+                         </div>
+                    </div>
+                </aside>
+                <!--sidebar end ------->
+            </div>   
+        </div>
+    </section>
+
+    <!--tips section ------->
+
+    <!--newsletter section ------>
+    <section class="newsletter__section">
+        <div class="container">
+            <h2>Join Us Today!</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid possimus veritatis sequi fuga quisquam quod aut! Optio corporis amet enim.</span>
+            <form action="#!" method="POST" autocomplete="off">
+                <input type="email" name="email"  placeholder="Email">
+                <input type="submit" name= "submit" value="Subscribe">
+            </form>
+        </div>
+    </section>
+    
+    <!--destination section ------>
+    <section class="destination__section">
+        <div class="container">
+            <div class="title">
+                <h2>Top <span>Destinations</span></h2>
+            </div>
+        </div>    
+            <ul class="destination__container">
+                <li>
+                    <div class="img__container">
+                        <span>01</span>
+                        <span>Sydney, Australia</span>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing e</span>
+                        <a href="#!"><i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="/img/d-2.jpg" alt="destination">
+                    </div>
+                </li>
+                <li>
+                    <div class="img__container">
+                        <span>02</span>
+                        <span>Paris, France</span>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing e</span>
+                        <a href="#!"><i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="/img/d-3.jpg" alt="destination">
+                    </div>
+                </li>
+                <li>
+                    <div class="img__container">
+                        <span>03</span>
+                        <span>Bali, Indonesia</span>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing e</span>
+                        <a href="#!"><i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="/img/d-1.jpg" alt="destination">
+                    </div>
+                </li>
+                <li>
+                    <div class="img__container">
+                        <span>04</span>
+                        <span>Carcelona, Spain</span>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing e</span>
+                        <a href="#!"><i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="/img/d-5.jpg" alt="destination">
+                    </div>
+                </li>
+            </ul>   
+    </section>
+
+    <!--static map -------->
+
+    <!--footer section ------>
+    <%- include('./partials/footer.ejs') %>
+    <div class="copyright">
+        <div class="container">
+            <span>Copyright &copy; Right by VoyageVisita 2024</span>
+        </div>
+    </div>
+
+    <!--scripts ------>
+    <script src="/js/main.js"></script>
+</body>
+</html>

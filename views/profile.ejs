@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <div class="nav__container">
+        <nav class="nav__bar container">
+            <a href="#!" class="logo">VoyageVista<span></span></a>
+            <%- include('./partials/nav') %>
+            <% if (user) { %>
+                <a href="/signin" class="username"><i class="fa-solid fa-user"></i><%= user.username %></a>
+            <% } else { %>
+                <a href="/signin" class="btn__primary">Sign In</a>
+            <% } %>
+        </nav>
+    </div>
+    
+    <div class="account__info">
+        <div class="container">
+            <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            <a href="/user/<%= user.username %>" class="delete__account"><i class="fa-solid fa-trash"></i>Delete Account</a>
+        </div>
+    </div>
+
+    <section class="profile">
+      <div class="container">
+        <div class="user__detials">
+            <div class="user__content">
+                <span>Update Your Account</span>
+                <div class="user__image">
+                    <div class="user__picture"></div>
+                    <div class="select__image">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <!-- <img src="/src/img/user-1.jpg"> -->
+                </div>
+
+                <div class="user__info">
+                    <form action="/auth/user" method="PUT">
+                        <div>
+                            <label for="username">Username:</label> <br>
+                            <input type="text" name="username" id="username" value="<%= user.username %>">
+                        </div>
+                        <div>
+                            <label for="fullname">Full Name:</label> <br>
+                            <input type="text" name="fullname" id="fullname" value="<%= user.fullname %>">
+                        </div>
+                        <div>
+                            <label for="email">Email:</label> <br>
+                            <input type="email" name="email" id="email" value="<%= user.email %>">
+                        </div>
+                        <div class="input__desc input__password">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="********">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        <button type="submit" name="submit">Update</button>
+                    </form>
+                </div>
+                
+
+                <div class="user__blogs">
+
+                    <span>User's Posts</span>
+        
+                    <div class="card__wrapper">
+                        <div class="card__container">
+                            <div class="card__image">
+                                <img src="/img/blog-5.jpg">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span class="month"> February</span>
+                                    <span class="day">10,</span>
+                                    <span class="year">2024</span>
+                                </div>
+                                <div class="card__admin">
+                                    <i class="fa-solid fa-user"></i> 
+                                <span class="admin__name"><%= user.fullname %></span>
+                                </div>
+                                <ul class="icon__container">
+                                    <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Edit Post</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-trash"></i>Delete Post</a></li>
+                                </ul>
+                                <div class="title__container">
+                                    <a href="#!" class="card__title">10 Must-Visit Hidden Gems for Adventurers</a>
+                                </div>
+                                <p class="card__desc">Explore off-the-beaten-path destinations that promise adventure and discovery, from secluded mountain trails to hidden waterfalls waiting to be explored.</p>
+                            </div>
+                        </div>
+                        <div class="card__container">
+                            <div class="card__image">
+                                <img src="/img/blog-3.jpg">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span class="month"> February</span>
+                                    <span class="day">5,</span>
+                                    <span class="year">2024</span>
+                                </div>
+                                <div class="card__admin">
+                                    <i class="fa-solid fa-user"></i> 
+                                <span class="admin__name"><%= user.fullname %></span>
+                                </div>
+                                <ul class="icon__container">
+                                    <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Edit Post</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-trash"></i>Delete Post</a></li>
+                                </ul>
+                                <div class="title__container">
+                                    <a href="#!" class="card__title">Tropical Islands and Sun-Kissed Beaches</a>
+                                </div>
+                                <p class="card__desc">Tropical Islands and Sun-Kissed Beaches"
+                                    Description: Escape to tropical paradise as we island-hop through crystal-clear waters, lounge on pristine beaches, and soak up the sun in idyllic island settings.</p>
+                            </div>
+                        </div>
+                        <div class="card__container">
+                            <div class="card__image">
+                                <img src="/img/blog-6.jpg">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span class="month"> February</span>
+                                    <span class="day">12,</span>
+                                    <span class="year">2024</span>
+                                </div>
+                                <div class="card__admin">
+                                    <i class="fa-solid fa-user"></i> 
+                                <span class="admin__name"><%= user.fullname %></span>
+                                </div>
+                                <ul class="icon__container">
+                                    <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Edit Post</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-trash"></i>Delete Post</a></li>
+                                </ul>
+                                <div class="title__container">
+                                    <a href="#!" class="card__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                </div>
+                                <p class="card__desc"> Immerse yourself in the vibrant cultures of the world as we explore traditional celebrations, colorful festivals, and age-old customs that showcase the diversity of humanity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>About Me</h3>
+            <div class="media__icons media">
+                <ul>
+                    <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="about__me">
+                <div class="content">
+                    <div class="img__box">
+                    <img src="/img/user-1.jpg" alt="">
+                    </div>
+                    <p class="text">
+                        Hey there! I'm <%= user.fullname %> , a travel enthusiast with a passion for exploration and discovery. Join me as I wander the globe, seeking out hidden gems and sharing my adventures along the way. Let's explore together!</p>
+                </div>
+            </div>
+            <h3>Categories</h3>
+            <div class="categories">
+                <ul>
+                    <li><a href="#!">City Guides (6)</a></li>
+                    <li><a href="#!">Culteral Experience (8)</a></li>
+                    <li><a href="#!">Urban Adventure (4)</a></li>
+                    <li><a href="#!">Hidden Gems (6)</a></li>
+                    <li><a href="#!">Travel Tips (9)</a></li>
+                    <li><a href="#!">Street Photography (4)</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!--footer section ------>
+    <%- include('./partials/footer.ejs') %>
+    <div class="copyright">
+        <div class="container">
+            <span>Copyright &copy; Right by VoyageVisita 2024</span>
+        </div>
+    </div>
+    <!--================ SCRIPT =========-->
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

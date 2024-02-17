@@ -1,0 +1,28 @@
+{
+  "name": "voyagevista",
+  "version": "1.0.0",
+  "description": "VoyageVisita is a project that aims to create a dynamic and angaging blogging. This platform allows usersyo sharetheir thoughys, experiences, and insights through blog posts. Whether you're a travel enthusiast, a foodie, or someone with a story to tell , VoyageVista provides a space for unique voice",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "mongodb": "3.7",
+    "mongoose": "^8.1.2",
+    "nodemon": "^3.0.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "start": "^5.1.0"
+  }
+}

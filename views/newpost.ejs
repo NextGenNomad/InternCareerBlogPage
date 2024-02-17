@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <div class="nav__container">
+        <nav class="nav__bar container">
+            <a href="#!" class="logo">VoyageVista<span></span></a>
+            <%- include('./partials/nav') %>
+            <% if (user) { %>
+                <a href="/signin"><i class="fa-solid fa-user"></i><%= user.username %></a>
+            <% } else { %>
+                <a href="/signin" class="btn__primary">Sign In</a>
+            <% } %>
+        </nav>
+    </div>
+
+        <!---======== SHARE YOUR STORY SECTION =========-->
+
+<section class="insight">
+    <div class="container">
+        <span>Stories</span>
+        <h2>Share Your Journy: Create a Post</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam eos ut recusandae s, velit magni est facilis omnis.</p>
+        <div class="guides">
+            <div class="right__content">
+                <ul>
+                    <li>
+                        <span>01</span>
+                        <div class="desc">
+                            <span>Sign In/Create Account</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <div class="desc">
+                            <span>Compose Your Post</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <div class="desc">
+                            <span>Publish Your Post</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </div>                     
+                    </li>
+                </ul>
+            </div>
+                <div class="img__container">
+                    <img src="/img/share.jpg" alt="img">
+                </div>
+        </div>
+        <div class="main__content">
+            <div class="create__post__container">
+                <span>Upload</span>
+                <h2 class="share__post">Share Your Journy: Create a Post</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias ipsa nesciunt perspiciatis, aspernatur ducimus aperiam earum. consectetur adipisicing elit. Quos in numquam, nesciunt dolorum labore quas.</p>
+
+                <div class="create__post">
+                    <div class="form__container">
+                        <form action="/post" method="POST" enctype="multipart/form-data">
+                            <div class="input__container">
+                                <input type="text" name="title" placeholder="Post Title">
+                                <select name="category">
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="City Guides">City Guides</option>
+                                    <option value="Cultural Experience">Cultural Experience</option>
+                                    <option value="Urban Adventure">Urban Adventure</option>
+                                    <option value="Hidden Gems">Hidden Gems</option>
+                                    <option value="Travel Tips">Travel Tips</option>
+                                    <option value="Street Photography">Street Photography</option>
+                                </select>
+                                <input type="file" name="post__img">
+                            </div>
+                            <textarea name="desc" placeholder="Post Description"></textarea>
+                            <input type="submit" name="submit" value="Share Story">
+                        </form>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="conditions__container">
+                <div class="content__container">
+                    <span>Terms &  Conditions</span>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dolorum!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--footer section ------>
+   <%- include('./partials/footer.ejs') %>
+    <div class="copyright">
+        <div class="container">
+            <span>Copyright &copy; Right by VoyageVisita 2024</span>
+        </div>
+    </div>
+</body>
+</html>

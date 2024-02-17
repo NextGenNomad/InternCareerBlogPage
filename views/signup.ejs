@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+ <!-- Top Bar -->
+ <div class="breadcrumb__container">
+    <div class="container">
+        <div class="beadcrumb">
+            <ul>
+                <li><a href="/"><i class="fa-solid fa-home"></i></a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="/siginup">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Form -->
+<div class="signin__card__container">
+    <div class="signin__card signup__card">
+        <span>Sign Up</span>
+        <div class="message"></div>
+        <form action="auth/signup" method="POST">
+            <div class="input__desc">
+                <input type="text" id="username" name="username" placeholder="Username" >
+            </div>
+            
+            <div class="input__desc">
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+            </div>
+            
+            <div class="input__desc">
+                <input type="email" id="email" name="email" placeholder="Email" >
+            </div>
+
+            <div class="input__desc input__password">
+                <input type="password" id="password" name="password" placeholder="Password" >
+                <i class="fa-solid fa-eye-slash"></i>
+            </div>
+
+            <div class="input__desc confirm__password">
+                <input type="password" id="confirm__password" name="confirm__password" placeholder="Confirm Password" >
+                <i class="fa-solid fa-eye-slash"></i>
+            </div>
+
+            <div class="terms">
+                <label for=""><input type="checkbox" id="terms" name="terms"> I agree to <span>terms</span></label>
+            </div>
+
+            <div class="input__desc">
+                <input type="submit" name="submit" id="submit" value="Sign Up">
+            </div>
+
+            <div class="member">
+                <span>Already a member?  </span><a href="/signin">Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div class="nav__container">
+        <nav class="nav__bar container">
+            <a href="#!" class="logo">VoyageVista<span></span></a>
+            <%- include('./partials/nav') %>
+             <a href="signin.html" class="btn__primary">Sign In</a>
+        </nav>
+
+        <!--========== RIGHT CONTENT SECTION ========-->
+    <section class="featured blog__details">
+        <div class="container">
+            <div class="img__container">
+                <img src="/src/img/blog-3.jpg" alt="image">
+            </div>
+            <!---======== featured overrall container  =========---->
+
+            <div class="featured__wrapper">
+                <!--==== right content =============-->
+                <div class="right__content">
+                    <div class="blog__date">
+                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                        <span class="day">23,</span>
+                        <span class="year">2022</span>
+                     </div>
+                     <div class="blog__admin">
+                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                    </div>
+
+                    <h2 class="blog__title">City Wonders: Exploring the Architecyural Marvels of Tokyo</h2>
+                    <p class="blog__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem vitae aperiam, consequatur cum perferendis nemo impedit vero, blanditiis ut tempora unde maxime laborum optio consectetur a at consequuntur deserunt rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, debitis mollitia atque, doloribus rem incidunt quis iste aliquam molestias velit similique sit nulla eos magnam aperiam quisquam illo? Aliquam, harum?</p>
+
+                    <div class="quote">
+                        <div class="icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi omnis suscipit voluptate veniam architecto voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam amet repellat similique porro a ea.  Lorem ipsumr adipisicing elit. Quam, voluptate.</p>
+                    </div>
+
+                    <h3>How the City become banned?</h3>
+                    <p class="blog__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem vitae aperiam, consequatur cum perferendis nemo impedit vero, blanditiis ut tempora unde maxime laborum optio consectetur a at consequuntur deserunt rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, debitis mollitia atque, doloribus rem incidunt quis iste aliquam molestias velit similique sit nulla eos magnam aperiam quisquam illo? Aliquam, harum?</p>
+
+                    <div class="img__container">
+                        <img src="/src/img/dance.jpg" alt="banned">
+                    </div>
+
+                    <p class="blog__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem vitae aperiam, consequatur cum perferendis nemo impedit vero, blanditiis ut tempora unde maxime laborum optio </p>
+
+                    <div class="related__posts">
+                        <span>Related Posts</span>
+                        <div class="post__container">
+                            <div class="post ">
+                                <div class="img__container">
+                                    <img src="/src/img/travel-1.jpg" alt="post img">
+                                </div>
+                                <div class="post__details">
+                                    <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                                        <span class="day">23,</span>
+                                        <span class="year">2022</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="post ">
+                                <div class="img__container">
+                                    <img src="/src/img/post-4.jpg" alt="post img">
+                                </div>
+                                <div class="post__details">
+                                    <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                                        <span class="day">23,</span>
+                                        <span class="year">2022</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <span>Comments (<span id="comment__count">4</span>)</span>
+                    </div>
+
+                    <div class="comment-container">
+                        <h2>Comments</h2>
+                        <div id="comments-list"></div>
+                        <form id="comment-form">
+                          <input type="text" id="author" placeholder="Your Name" required>
+                          <textarea id="content" placeholder="Your Comment" required></textarea>
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>
+                </div>
+                <!--==================================== ----->
+                        <!--SIDEBAR CONTENT SECTION-->
+                <!--==================================== ----->
+                <aside class="sidebar">
+                    <h3>Follow Us</h3>
+                    <div class="media__icons">
+                        <ul>
+                            <li><a href="#!"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#!"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Join Us Today!</h4>
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, corporis voluptas. Laudantium obcaecati corporis maxime!</span>
+                         <form action="#!" autocomplete="off">
+                            <div class="input__box">
+                                <input type="text" name="name"  placeholder="Name">
+                            </div>
+                            <div class="input__box">
+                                <input type="email" name="email"  placeholder="Email">
+                            </div>
+                            <input type="submit" value="Subscribe" name="submit">
+                         </form>
+                    </div>
+                    <div class="categories">
+                        <ul>
+                            <li><a href="#!">City Guides (6)</a></li>
+                            <li><a href="#!">Culteral Experience (8)</a></li>
+                            <li><a href="#!">Urban Adventure (4)</a></li>
+                            <li><a href="#!">Hidden Gems (6)</a></li>
+                            <li><a href="#!">Travel Tips (9)</a></li>
+                            <li><a href="#!">Street Photography (4)</a></li>
+                        </ul>
+                    </div>
+                    <div class="popular__posts">
+                         <h3>Popular Posts</h3>
+                         <div class="post__wrapper">
+                            <div class="post first">
+                                <div class="img__container">
+                                    <img src="/src/img/blog-1.jpg" alt="post img">
+                                </div>
+                                <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                <div class="post__details">
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                                        <span class="day">23,</span>
+                                        <span class="year">2022</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="post third">
+                                <div class="img__container">
+                                    <img src="/src/img/blog-2.jpg" alt="post img">
+                                </div>
+                                <a href="#!" class="post__title">Cultural Fasion : Embracing Delivery in Urban Neighborhood</a>
+                                <div class="post__details">
+                                    <div class="blog__date">
+                                        <span class="month"><i class="fa-solid fa-calendar"></i> September</span>
+                                        <span class="day">23,</span>
+                                        <span class="year">2022</span>
+                                     </div>
+                                     <div class="blog__admin">
+                                       <span class="admin__name"><i class="fa-solid fa-user"></i> Asik Adin</span>
+                                    </div>
+                                </div> 
+                            </div>
+                         </div>
+                    </div>
+                </aside>
+                <!--sidebar end ------->
+            </div>   
+        </div>
+    </section>
+
+       <!--footer section ------>
+       <%- include('./partials/footer.ejs') %>
+</body>
+</html>
